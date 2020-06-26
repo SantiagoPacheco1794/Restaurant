@@ -17,9 +17,14 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         Table table = new Table();
-        
         table.estaReservada(true);
         table.estaReservada(false);
+        
+        Dishes firstDish = new Dishes(1, "mondongo",150.0f);
+        
+        Menu menu = new Menu();
+        menu.CreateMenu();
+        menu.AddDishToMenu(firstDish);
+        menu.ShowMenu();
     }
-    
-}
+};
