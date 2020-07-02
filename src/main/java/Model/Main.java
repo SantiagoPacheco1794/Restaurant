@@ -25,6 +25,8 @@ public class Main {
         Menu menu = new Menu();
         menu.CreateMenu();
         menu.AddDishToMenu(firstDish);
+        table.calcularTotal(firstDish);
         menu.ShowMenu();
+        
     }
 };

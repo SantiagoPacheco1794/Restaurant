@@ -32,5 +32,14 @@ public class Table {
         }
         return result;
     }
+    
+    public float calcularTotal(Dishes dishPrice)
+    {
+        float total = 0;
+        total = total + dishPrice.getPrice();
+        
+        System.out.println("El total de la mesa es " + total);
+        return total;
+    }
 };
 
