@@ -10,7 +10,16 @@ package Model;
  * @author Corbenik
  */
 public class Table {
+    private int idTable;
     private boolean reservada;
+    
+    public void setIdTable(int i){
+        this.idTable = i;
+    }
+    
+    public int getIdTable(){
+        return this.idTable;
+    }
     
     public void setReservada(boolean reservada){
         this.reservada = reservada;
@@ -33,13 +42,6 @@ public class Table {
         return result;
     }
     
-    public float calcularTotal(Dishes dishPrice)
-    {
-        float total = 0;
-        total = total + dishPrice.getPrice();
-        
-        System.out.println("El total de la mesa es " + total);
-        return total;
-    }
+  
 };
 
