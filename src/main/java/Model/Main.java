@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Model;
 
 /**
@@ -11,22 +6,32 @@ package Model;
  */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
-        Table table = new Table();
-        table.estaReservada(true);
-        table.estaReservada(false);
         
-        Dishes firstDish = new Dishes(1, "mondongo",150.0f);
+        //Table table = new Table();
+        //table.estaReservada(true);
+        //table.estaReservada(false);
+        
+        Dishes firstDish = new Dishes("mondongo",150.0f);
+        Dishes secondDish = new Dishes("café", 300.0f);
+        Dishes thirdDish = new Dishes("medialuna",15.0f);
         
         Menu menu = new Menu();
         menu.CreateMenu();
         menu.AddDishToMenu(firstDish);
-        table.calcularTotal(firstDish);
+        menu.AddDishToMenu(secondDish);
+        menu.AddDishToMenu(thirdDish);
         menu.ShowMenu();
+        
+        TableController table = new TableController();
+
+        table.createTable(1);
+        table.createTable(2);
+        table.createTable(3);
+        
+        table.RefreshTotalTable(table.createTable(1), 70f, 1);
+        
+       
         
     }
 };

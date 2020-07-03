@@ -32,6 +32,7 @@ public class Table {
     public boolean estaReservada(boolean reservada){
         boolean result = true;
         this.reservada = reservada;
+        
         if(reservada == result){
             System.out.println("La mesa esta reservada");
         }
@@ -39,9 +40,14 @@ public class Table {
             System.out.println("La mesa esta libre");
             result = false;
         }
+        
         return result;
     }
     
-  
+    public Table(){
+        this.idTable = 0;
+        this.reservada = true;
+    }
+    
 };
 
