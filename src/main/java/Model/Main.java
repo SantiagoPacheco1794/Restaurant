@@ -24,15 +24,17 @@ public class Main {
         menu.ShowMenu();
         
         TableController table = new TableController();
+        table.AddTable(table.createTable());
 
-
+/*
         table.createTable(2);
         table.createTable(3);
         
         table.Total(firstDish);
         table.RefreshTotalTable(1, 500f);
-        
-       
+  */      
+    table.SelectTable(0);
+    table.Total(0);
         
     }
 };

@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package Model;
-
+import java.util.List;
+import java.util.ArrayList;
 /**
  *
  * @author Corbenik
@@ -12,6 +13,16 @@ package Model;
 public class Table {
     private int idTable;
     private boolean reservada;
+    private float totalTable;
+    private List <Dishes> dishesList;
+
+    public float getTotalTable() {
+        return totalTable;
+    }
+
+    public void setTotalTable(float totalTable) {
+        this.totalTable = totalTable;
+    }
     
     public void setIdTable(int i){
         this.idTable = i;
@@ -47,7 +58,21 @@ public class Table {
     public Table(){
         this.idTable = 0;
         this.reservada = true;
+        this.totalTable = 0.0f;
+        this.dishesList = new ArrayList<>();
+    }
+
+    public List<Dishes> getDishesList() {
+        return dishesList;
+    }
+
+    public void setDishesList(List<Dishes> dishesList) {
+        this.dishesList = dishesList;
     }
     
+    @Override
+    public String toString(){
+      return this.idTable + " " + this.reservada + " " + this.totalTable;
+    }
 };
 
