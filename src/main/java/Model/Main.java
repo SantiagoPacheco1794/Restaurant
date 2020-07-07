@@ -25,11 +25,12 @@ public class Main {
         
         TableController table = new TableController();
 
-        table.createTable(1);
+
         table.createTable(2);
         table.createTable(3);
         
-        table.RefreshTotalTable(table.createTable(1), 70f, 1);
+        table.Total(firstDish);
+        table.RefreshTotalTable(1, 500f);
         
        
         

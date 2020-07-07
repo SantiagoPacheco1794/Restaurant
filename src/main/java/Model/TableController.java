@@ -18,7 +18,16 @@ public class TableController {
 public float Total(Dishes dishPrice){
     float total = 0;
     total = total + dishPrice.getPrice();
+
+    System.out.println("El total de la mesa es " + total);
     
+    return total;
+    }
+
+public float Total(Float price){
+    float total = 0;
+    total = total + price;
+
     System.out.println("El total de la mesa es " + total);
     
     return total;
@@ -26,7 +35,8 @@ public float Total(Dishes dishPrice){
 
     public Table createTable(int idTable){
         Table table = new Table();
-        table.setIdTable(idTable);
+        float total = totalTable;
+        tablemap.put(idTable, total);
         
         return table;
     }
@@ -36,11 +46,9 @@ public float Total(Dishes dishPrice){
         this.tablemap = new HashMap<>();
     }
     
-    public float RefreshTotalTable(Table nTable, Float total, int idTable){ 
-        int id = nTable.getIdTable();
-        tablemap.put(id, total);
+    public float RefreshTotalTable(int idTable, Float total){ 
         
-        float oldTotal = tablemap.get(idTable);
+        //float oldTotal = Total();
         System.out.println("The old total is " + oldTotal);
         float newTotal = oldTotal + total;
         System.out.println("The new total is " + newTotal);
